@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local2 ="clr-namespace:Buddy"
+             xmlns:magicGradients="clr-namespace:MagicGradients;assembly=MagicGradients"
+             mc:Ignorable="d"
+             x:Class="Buddy.Views.LoginPage" NavigationPage.HasNavigationBar="False"
+             Style="{DynamicResource currentStyle}">
+
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height=".5*" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="60" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{local2:ImageResource Buddy.Images.PluralBuddyLogo6.png}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="4"></Image>
+            <Entry Placeholder="Email" x:Name="User_Name"  PlaceholderColor="#DADDFB"   Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="6" />
+            <Entry Placeholder ="Password" x:Name="Pass_Word" PlaceholderColor="#DADDFB" IsPassword="True" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="6" />
+            <Frame CornerRadius="8"
+                   OutlineColor="Transparent"
+                   BorderColor="Transparent"
+                   Padding="0"
+                   Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="6" x:Name="loginFrame">
+                <Grid BackgroundColor="#ffb6b9" x:Name="loginGrid">
+                    <Button Text="Login" Clicked="LoginCommand" BackgroundColor="Transparent" BorderColor="Transparent" />
+                </Grid>
+            </Frame>
+            <RelativeLayout Grid.Column="3" Grid.Row="8" BackgroundColor="Transparent">
+                <Label Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="6" Text="Dont have an account?" VerticalOptions="Center"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=1}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=1}"></Label>
+                <Frame CornerRadius="5"
+                   OutlineColor="Transparent"
+                   Padding="0"
+                   BorderColor="White"
+                   Opacity=".7"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=200,Factor=1}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-4 ,Factor=1}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=.7}">
+
+                    <Button Text="Sign up" TextColor="Black" BorderWidth="0" BorderColor ="White" Clicked="SignupCommand" BackgroundColor="Transparent" x:Name="signupButton" />
+                </Frame>
+                <Frame CornerRadius="5"
+                       OutlineColor ="Transparent"
+                       BorderColor="White"
+                       Padding="0"
+                       Opacity=".7"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-350, Factor=1}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-4, Factor=1}" x:Name="forgotPassFrame">
+                    <Grid>
+                        <Button Text="Forgot Password?" x:Name="ForgotPass" TextColor="Black" Clicked="ForgotPassCommand" BackgroundColor="Transparent" />
+                        <Button Text="&#8592;" x:Name="backArrow" IsVisible="false" Clicked="backCommand" />
+                    </Grid>
+                </Frame>
+                <ContentView x:Name="passwordView" IsVisible="False" BackgroundColor="Transparent">
+                    <StackLayout x:Name="Stack2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                        <StackLayout x:Name="innerStack2" Orientation="Vertical">
+                            <Label x:Name="passwordLabel" Text="Password" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" />
+                            <Entry x:Name="firstPassword" ReturnType="Next" Keyboard="Email" IsPassword="True" Placeholder="New Password" />
+                            <Entry x:Name="secondPassword" ReturnType="Done" Keyboard="Email" IsPassword="True" Placeholder="Confirm Password" />
+                            <Label x:Name="warningLabel" Text="" IsVisible="False" TextColor="SlateBlue" BackgroundColor="Transparent" />
+                            <Button x:Name="submitButton" Text="Change password" Clicked="Password_ChangeEvent" />
+                        </StackLayout>
+                    </StackLayout>
+                </ContentView>
+            </RelativeLayout>
+            <ContentView x:Name="popupLoadingView" BackgroundColor="Transparent" IsVisible="False" Grid.Row="3" Grid.Column="2"
+                         Grid.RowSpan="2" Grid.ColumnSpan="4">
+                <RelativeLayout x:Name="Stack1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression  Type=RelativeToParent, Property=Width,  Factor=1 }">
+                    <Label x:Name="email_validation_label" Text="Enter user email" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,  Constant=-710}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-100}" />
+                    <Entry x:Name="emailValidationEntry" Keyboard="Email" Placeholder="examplename@example.com" TextColor="SlateBlue"
+                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+                    <Frame CornerRadius="5"
+                       OutlineColor ="Transparent"
+                       BorderColor="Transparent"
+                       Padding="0"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-400}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=40}">
+                        <Grid>
+                            <Button x:Name="updateButton" Clicked="userCheckEmail" Text="Check" BackgroundColor="Transparent" TextColor="Black" />
+                        </Grid>
+                    </Frame>
+                </RelativeLayout>
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True" x:FieldModifier="public" x:Key="lightTheme">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <magicGradients:GradientView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <magicGradients:GradientView.GradientSource>
+                                        <magicGradients:LinearGradient Angle="314">
+                                            <magicGradients:GradientStop Color="#BEEBE9" Offset="0" />
+                                            <magicGradients:GradientStop Color="#f4dada" Offset=".6" />
+                                            <magicGradients:GradientStop Color="#f6eec7" Offset=".8" />
+                                        </magicGradients:LinearGradient>
+                                    </magicGradients:GradientView.GradientSource>
+                                </magicGradients:GradientView>
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="False" x:FieldModifier="public" x:Key="darkTheme">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <magicGradients:GradientView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <magicGradients:GradientView.GradientSource>
+                                        <magicGradients:RadialGradient>
+                                            <magicGradients:GradientStop Color="#f4ebc1" />
+                                            <magicGradients:GradientStop Color="#709fb0" />
+                                            <magicGradients:GradientStop Color="#a0c1b8" />
+                                            <magicGradients:GradientStop Color="#726a95" />
+                                        </magicGradients:RadialGradient>
+                                    </magicGradients:GradientView.GradientSource>
+                                </magicGradients:GradientView>
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+</ContentPage>

@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Buddy",
+    "\\Buddy\\Buddy",
+    "\\Buddy\\Buddy\\obj",
+    "\\Buddy\\Buddy\\obj\\Release",
+    "\\Buddy\\Buddy\\obj\\Release\\netstandard2.0",
+    "\\Buddy\\Buddy\\obj\\Release\\netstandard2.0\\Views"
+  ],
+  "SelectedNode": "\\Buddy\\Buddy\\obj\\Buddy.csproj.nuget.dgspec.json",
+  "PreviewInSolutionExplorer": false
+}

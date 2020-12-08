@@ -1,0 +1,72 @@
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Images\defaultAVIL-Dark_48x48.png
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Buddy.deps.json
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Buddy.dll
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\ref\Buddy.dll
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Buddy.pdb
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Mono.Android.xml
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.csprojAssemblyReference.cache
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\Dynamix\Res.xaml.g.cs
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\UserProfile.xaml.g.cs
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.AssemblyInfoInputs.cache
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.AssemblyInfo.cs
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.csproj.CoreCompileInputs.cache
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.csproj.CopyComplete
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.dll
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\ref\Buddy.dll
+C:\Users\dwrig\source\repos\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.pdb
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Images\defaultAVIL-Dark_48x48.png
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Buddy.deps.json
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Buddy.dll
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\ref\Buddy.dll
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Buddy.pdb
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\Dynamix\Res.xaml.g.cs
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\UserProfile.xaml.g.cs
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.AssemblyInfoInputs.cache
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.AssemblyInfo.cs
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.csproj.CoreCompileInputs.cache
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.csproj.CopyComplete
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.dll
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\ref\Buddy.dll
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.pdb
+C:\Users\dwrig\Source\Repos\Kcops11\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.csprojAssemblyReference.cache
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Images\defaultAVIL-Dark_48x48.png
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Buddy.deps.json
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Buddy.dll
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\ref\Buddy.dll
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Buddy.pdb
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Mono.Android.dll
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Mono.Android.pdb
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\bin\Debug\netstandard2.0\Mono.Android.xml
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\App.xaml.g.cs
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\Dynamix\Res.xaml.g.cs
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Views\UserProfile.xaml.g.cs
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.AssemblyInfoInputs.cache
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.AssemblyInfo.cs
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.csproj.CopyComplete
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.dll
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\ref\Buddy.dll
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.pdb
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.csprojAssemblyReference.cache
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\Buddy.csproj.CoreCompileInputs.cache
+F:\Documents\Personal Projects\Buddy manual log\Buddy(11-03-20)\Buddy\Buddy\Buddy\obj\Debug\netstandard2.0\XamlC.stamp

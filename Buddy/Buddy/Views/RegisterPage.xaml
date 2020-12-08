@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local ="clr-namespace:Buddy.Behaviors"
+             xmlns:magicGradients="clr-namespace:MagicGradients;assembly=MagicGradients"
+             mc:Ignorable="d"
+             x:Class="Buddy.Views.RegisterPage" NavigationPage.HasNavigationBar="False"
+             Style="{DynamicResource currentStyle}">
+
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Label Text="Register your system" TextColor="Black" FontSize="Header" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent , Property= Width, Factor=.3}" />
+            <Entry Placeholder="System name" x:Name="EntryUserName" PlaceholderColor="SlateBlue"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.4, Constant=-250 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.4, Constant=-100}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.6}">
+                <Entry.Behaviors>
+                    <local:WordFilterBehavior />
+                </Entry.Behaviors>
+            </Entry>
+            <Entry Placeholder="Date / of / Birth" x:Name="DOB" PlaceholderColor="SlateBlue" Keyboard="Numeric"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.4, Constant=-250 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.4, Constant=-25 }"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.6}">
+                <Entry.Behaviors>
+                    <local:BirthdateFormatBehavior />
+                </Entry.Behaviors>
+            </Entry>
+            <Entry Placeholder="# of members" x:Name="NumUsers" PlaceholderColor="SlateBlue" Keyboard="Numeric"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.4, Constant=-250 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.4, Constant= 50 }"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.6}">
+                <Entry.Behaviors>
+                    <local:LetterFilterBehavior />
+                </Entry.Behaviors>
+            </Entry>
+            <Entry Placeholder ="Pronouns" x:Name="Pronouns"  PlaceholderColor="SlateBlue"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.4, Constant=-250 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.4, Constant= 125 }"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.6}">
+                <Entry.Behaviors>
+                    <local:WordFilterBehavior />
+                </Entry.Behaviors>
+            </Entry>
+
+            <Entry Placeholder="Email" x:Name="EntryEmail" ReturnType="Next" PlaceholderColor="SlateBlue"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.4, Constant=-250 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.4, Constant= 200}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.6}">
+                <Entry.Behaviors>
+                    <local:EmailValidatorBehavior />
+                </Entry.Behaviors>
+            </Entry>
+            <Entry Placeholder="Password" x:Name="EntryUserPassword" IsPassword="True" PlaceholderColor="SlateBlue"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.4, Constant=-250 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.4, Constant= 275}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.27}">
+                <Entry.Behaviors>
+                    <local:PasswordValidationBehavior />
+                </Entry.Behaviors>
+            </Entry>
+            <Entry Placeholder="Confirm Password" x:Name="EntryUserPConfirm" IsPassword="True" PlaceholderColor="SlateBlue"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.4, Constant= 145 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.4, Constant= 275}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.27}">
+                <Entry.Behaviors>
+                    <local:CompareValidationBehavior />
+                </Entry.Behaviors>
+            </Entry>
+            <Label x:Name="warningLabel" Text="" IsVisible="False" TextColor="Transparent" FontSize="15" BackgroundColor="Transparent" />
+            <Frame CornerRadius="5"
+                   BackgroundColor="Transparent"
+                   BorderColor="White"
+                   Padding="0"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.4, Constant= 90 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.4, Constant= 400}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.27}">
+                <Grid>
+                    <Button Text="Register" Clicked="Registration_Action" BackgroundColor="Transparent" />
+                </Grid>
+            </Frame>
+            <Frame CornerRadius="5"
+                   BackgroundColor="Transparent"
+                   BorderColor="White"
+                   Padding="0"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.4, Constant= -250 }"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.4, Constant= 400}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.15}">
+                <Grid>
+                    <Button Text="&#8592;" x:Name="backArrow" IsVisible="true" Clicked="backCommand" BackgroundColor="Transparent" />
+                </Grid>
+            </Frame>
+        </RelativeLayout>
+    </ContentPage.Content>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True" x:FieldModifier="public" x:Key="lightTheme">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <magicGradients:GradientView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <magicGradients:GradientView.GradientSource>
+                                        <magicGradients:LinearGradient Angle="314">
+                                            <magicGradients:GradientStop Color="#BEEBE9" Offset="0" />
+                                            <magicGradients:GradientStop Color="#f4dada" Offset=".6" />
+                                            <magicGradients:GradientStop Color="#f6eec7" Offset=".8" />
+                                        </magicGradients:LinearGradient>
+                                    </magicGradients:GradientView.GradientSource>
+                                </magicGradients:GradientView>
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="False" x:FieldModifier="public" x:Key="darkTheme">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <magicGradients:GradientView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <magicGradients:GradientView.GradientSource>
+                                        <magicGradients:RadialGradient>
+                                            <magicGradients:GradientStop Color="#f4ebc1" />
+                                            <magicGradients:GradientStop Color="#709fb0" />
+                                            <magicGradients:GradientStop Color="#a0c1b8" />
+                                            <magicGradients:GradientStop Color="#726a95" />
+                                        </magicGradients:RadialGradient>
+                                    </magicGradients:GradientView.GradientSource>
+                                </magicGradients:GradientView>
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+</ContentPage>

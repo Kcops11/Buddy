@@ -1,0 +1,21 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android"><external-files-path name="my_images" path="Pictures" /><external-files-path name="my_movies" path="Movies" /></paths><!-- Code to implement into Activity:
+
+Android.Widget.SearchView searchView;
+public override bool OnCreateOptionsMenu(IMenu menu)
+{
+  this.MenuInflater.Inflate(Resource.Menu.file_paths, menu);
+
+  var searchItem = menu.FindItem(Resource.Id.action_search);
+
+  searchView = searchItem.ActionProvider.JavaCast<Android.Widget.SearchView>();
+
+  searchView.QueryTextSubmit += (sender, args) =>
+  {
+    Toast.MakeText(this, "You searched: " + args.Query, ToastLength.Short).Show();
+
+  };
+
+  return base.OnCreateOptionsMenu(menu);
+}
+
+-->

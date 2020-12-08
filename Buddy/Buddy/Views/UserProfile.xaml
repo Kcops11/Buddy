@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:magicGradients="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:local2 ="clr-namespace:Buddy" 
+             mc:Ignorable="d"
+             x:Class="Buddy.Views.UserProfile"
+             Style="{DynamicResource currentStyle}">
+
+    <ContentPage.Content>
+        <RelativeLayout x:Name="primaryUserP" SizeChanged="primaryUserP_SizeChanged">
+
+            <RelativeLayout x:Name="UserBox" WidthRequest="200" HeightRequest="300"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=0}">
+
+                <BoxView x:Name="userBoxD" BackgroundColor="SlateGray" IsVisible="False"  HeightRequest="300" WidthRequest="200"/>
+
+                <BoxView x:Name="userBoxL" BackgroundColor="White" HeightRequest="300" WidthRequest="200"/>
+            </RelativeLayout>
+
+
+
+            <Frame x:Name="userFrame" HasShadow="False" WidthRequest="184" HeightRequest="184" CornerRadius="93" Padding="0" Margin="8"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent , Property=X ,Factor=1 ,Constant=0}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y,Factor=1,Constant=25}">
+
+                <Image Source="{local2:ImageResource Buddy.Images.defaultAVIL.jpg}" x:Name="userAV" Aspect="AspectFill" />
+            </Frame>
+            <Label x:Name="Name" Text="" TextColor="Black" FontSize="Large"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=70}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=250}" />
+
+
+            <RelativeLayout x:Name="DetailsLayout" 
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, Property=X, ElementName=UserBox, Factor=1, Constant=375}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Y, ElementName=UserBox, Factor=1, Constant=0}">
+
+                <BoxView x:Name="detailsView" HeightRequest="1000" WidthRequest="800"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=0}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=0}"/>
+                <Label Text="Name" TextColor="Black"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=65}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=370}"/>
+                <Label Text="Birthday" TextColor="Black"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=265}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=370}"/>
+                <Label Text="ProNouns" TextColor="Black"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=65}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y,  Factor=1, Constant=650}"/>
+                <Label Text="Role" TextColor="Black"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=265}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=650}"/>
+                <Entry x:Name="NameEntry" PlaceholderColor="Black" WidthRequest="120" IsEnabled="False"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=65}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=400}"/>
+                <Entry x:Name="BirthdayEntry" PlaceholderColor="Black" WidthRequest="120" IsEnabled="False"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=265}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=400}"/>
+                <Entry x:Name="ProNounsEntry" PlaceholderColor="Black" WidthRequest="120" IsEnabled="False"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=65}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y,  Factor=1, Constant=670}"/>
+                <Entry x:Name="RoleEntry" PlaceholderColor="Black" WidthRequest="120" IsEnabled="False"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=265}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=670}"/>
+                <Label x:Name="TriggersEntry" TextColor="Black" WidthRequest="140" IsEnabled="False" 
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=465}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=370}"/>
+                <ImageButton x:Name="AddTrigger" Source="{local2:ImageResource Buddy.Images.cross.png}" HeightRequest="48" WidthRequest="48" Clicked="AddTrigger_Clicked" IsVisible="false"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=610}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=355}"/>
+                <BoxView x:Name="AddTriggerView" BackgroundColor="Ivory" WidthRequest="220" HeightRequest="300" IsVisible="False" Opacity=".6"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=465}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=400}"/>
+                <Label x:Name="TrigName" Text="Trigger label" IsVisible="false"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=485}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=405}"/>
+                <Entry x:Name="TrigNameEntry" IsVisible="false" WidthRequest="150"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=480}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=430}"/>
+                <Label x:Name="SelectTrig" Text="Trigger Type" IsVisible="false"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=485}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=468}"/>
+                <Picker x:Name="SwitchPicker" SelectedItem="{Binding SelectedTrigger}" IsVisible="False" WidthRequest="150" SelectedIndexChanged="SwitchPicker_SelectedIndexChanged"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=480}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=495}"/>
+                <Label x:Name="SelectRef" Text="Reference Type" IsVisible="false"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=485}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=540}"/>
+                <Picker x:Name="TriggerRefPicker" SelectedItem="{Binding SelectedType}" IsVisible="False" WidthRequest="150" SelectedIndexChanged="TriggerRefPicker_SelectedIndexChanged" 
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=480}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=560}"/>
+                <Entry x:Name="RefURl" WidthRequest="150" IsVisible="false"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=480}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=610}"/>
+                <ImageButton x:Name="RefImg" IsVisible="false" Source="{local2:ImageResource Buddy.Images.cross.png}" HeightRequest="48" WidthRequest="48"  Clicked="RefImg_Clicked"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=640}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=550}"/>
+                <Button x:Name="RegisterTrigger" Text="Register Trigger" Clicked="RegisterTrigger_Clicked" IsVisible="false"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=480}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=660}"/>
+                <Frame x:Name="DescriptEntryFrame" BackgroundColor="White"  CornerRadius="26" WidthRequest="340" HeightRequest="200" IsClippedToBounds="True" Padding="0"  
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=360}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=86}" >
+                    <Editor x:Name="DescriptEntry" BackgroundColor="White" Opacity=".74"  IsEnabled="false" AutoSize="TextChanges" TextColor="Black" />
+                </Frame>
+
+                <ImageButton x:Name="SubAviButton" Source="{local2:ImageResource Buddy.Images.defaultAVIBare.png}" Clicked="SubAviClicked" IsEnabled="false" Padding="0" HeightRequest="256" WidthRequest="256" CornerRadius="64" Margin="32" Aspect="AspectFill"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=0}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=0}"/>
+                <ImageButton x:Name="EditUserButton" Source="{local2:ImageResource Buddy.Images.pencil.png}" Clicked="EditUserButton_Clicked" WidthRequest="48" HeightRequest="48"  
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=650}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=20}"/>
+                <Button x:Name="SubmitChanges2Sub" Text="Submit changes" IsVisible="false" WidthRequest="150" Clicked="SubmitChanges2Sub_Clicked"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,  Factor=1, Constant=65}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y,  Factor=1, Constant=950}"/>
+            </RelativeLayout>
+
+            <RelativeLayout x:Name="StatsLayout" BackgroundColor="SlateGray" HeightRequest="250" WidthRequest="1810"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=750}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=1175}">
+
+            </RelativeLayout>
+
+            <RelativeLayout x:Name="ReleventEvents" BackgroundColor="SlateGray" HeightRequest="1000" WidthRequest="700"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=1860}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=0}">
+
+            </RelativeLayout>
+
+            <Frame x:Name="MemDisplayFrame" HeightRequest="1100" WidthRequest="165"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=0}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=310}"/>
+
+            <ListView x:Name="memDisplayGrid" BackgroundColor="Transparent" HeightRequest="1094" WidthRequest="200" SelectedItem="CurrentMember" ItemSelected="memDisplayGrid_ItemSelected" VerticalScrollBarVisibility="Never" CachingStrategy="RecycleElementAndDataTemplate"  IsPullToRefreshEnabled="True"
+                      ItemsSource="{Binding SubMembers}"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=0}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=312}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="93" Padding="0" Margin="8">
+                                <Image Source="{Binding AviSource, TargetNullValue={local2:ImageResource Buddy.Images.defaultAVIBare.png}}" Aspect="AspectFit" />
+                            </Frame>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativeLayout>
+    </ContentPage.Content>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True" x:FieldModifier="public" x:Key="lightTheme">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <magicGradients:GradientView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <magicGradients:GradientView.GradientSource>
+                                        <magicGradients:LinearGradient Angle="314">
+                                            <magicGradients:GradientStop Color="#BEEBE9" Offset="0" />
+                                            <magicGradients:GradientStop Color="#f4dada" Offset=".6" />
+                                            <magicGradients:GradientStop Color="#f6eec7" Offset=".8" />
+                                        </magicGradients:LinearGradient>
+                                    </magicGradients:GradientView.GradientSource>
+                                </magicGradients:GradientView>
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="False" x:FieldModifier="public" x:Key="darkTheme">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <magicGradients:GradientView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <magicGradients:GradientView.GradientSource>
+                                        <magicGradients:RadialGradient>
+                                            <magicGradients:GradientStop Color="#f4ebc1" />
+                                            <magicGradients:GradientStop Color="#709fb0" />
+                                            <magicGradients:GradientStop Color="#a0c1b8" />
+                                            <magicGradients:GradientStop Color="#726a95" />
+                                        </magicGradients:RadialGradient>
+                                    </magicGradients:GradientView.GradientSource>
+                                </magicGradients:GradientView>
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <Image x:Name="defualtAV" x:Key="defAV" Source="{local2:ImageResource Buddy.Images.defaultAVIL.jpg}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+</ContentPage>

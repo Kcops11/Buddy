@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\bad-words.txt" />
+    <None Remove="Images\addUser_20x20.png" />
+    <None Remove="Images\cross.png" />
+    <None Remove="Images\defaultAVI.jpg" />
+    <None Remove="Images\defaultAVIBare.png" />
+    <None Remove="Images\defaultAVIBare_48x48.png" />
+    <None Remove="Images\defaultAVIL-Dark_48x48.png" />
+    <None Remove="Images\defaultAVIL.jpg" />
+    <None Remove="Images\defaultAVI_48x48.jpg" />
+    <None Remove="Images\journal.png" />
+    <None Remove="Images\journal_1_20x20.png" />
+    <None Remove="Images\keyhole20x20.png" />
+    <None Remove="Images\pencil.png" />
+    <None Remove="Images\Plural Buddy.png" />
+    <None Remove="Images\PluralBuddyLogo6.png" />
+    <None Remove="Images\PluralBuddyLogo6_64x64.png" />
+    <None Remove="Images\Plural_Buddy-resized.png" />
+    <None Remove="Images\Plural_BuddySmall.png" />
+    <None Remove="Images\settings_icon.png" />
+    <None Remove="Images\stats_20x20.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\bad-words.txt" />
+    <EmbeddedResource Include="Images\addUser_20x20.png" />
+    <EmbeddedResource Include="Images\cross.png" />
+    <EmbeddedResource Include="Images\defaultAVI.jpg" />
+    <EmbeddedResource Include="Images\defaultAVIBare.png" />
+    <EmbeddedResource Include="Images\defaultAVIBare_48x48.png" />
+    <EmbeddedResource Include="Images\defaultAVIL-Dark_48x48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\defaultAVIL.jpg" />
+    <EmbeddedResource Include="Images\defaultAVI_48x48.jpg" />
+    <EmbeddedResource Include="Images\journal.png" />
+    <EmbeddedResource Include="Images\journal_1_20x20.png" />
+    <EmbeddedResource Include="Images\keyhole20x20.png" />
+    <EmbeddedResource Include="Images\pencil.png" />
+    <EmbeddedResource Include="Images\Plural Buddy.png" />
+    <EmbeddedResource Include="Images\PluralBuddyLogo6.png" />
+    <EmbeddedResource Include="Images\Plural_BuddySmall.png" />
+    <EmbeddedResource Include="Images\stats_20x20.png" />
+    <XamlAppDef Include="Images\Plural_Buddy-resized.png" />
+    <EmbeddedResource Include="Images\settings_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MagicGradients" Version="1.2.0" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.10" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v7.1\Mono.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows.Foundation.UniversalApiContract">
+      <HintPath>C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.Foundation.UniversalApiContract\8.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+  </ItemGroup>
+</Project>

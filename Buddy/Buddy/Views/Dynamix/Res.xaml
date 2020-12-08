@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:magicGradients="clr-namespace:MagicGradients;assembly=MagicGradients"
+             mc:Ignorable="d"
+             x:Class="Buddy.Views.Dynamix.Res">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True" x:FieldModifier="public" x:Key="lightTheme">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <magicGradients:GradientView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <magicGradients:GradientView.GradientSource>
+                                        <magicGradients:LinearGradient Angle="314">
+                                            <magicGradients:GradientStop Color="#BEEBE9" Offset="0" />
+                                            <magicGradients:GradientStop Color="#f4dada" Offset=".6" />
+                                            <magicGradients:GradientStop Color="#f6eec7" Offset=".8" />
+                                        </magicGradients:LinearGradient>
+                                    </magicGradients:GradientView.GradientSource>
+                                </magicGradients:GradientView>
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="False" x:FieldModifier="public" x:Key="arkTheme">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <magicGradients:GradientView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <magicGradients:GradientView.GradientSource>
+                                        <magicGradients:RadialGradient>
+                                            <magicGradients:GradientStop Color="#726a95" Offset="0" />
+                                            <magicGradients:GradientStop Color="#709fb0" Offset=".2" />
+                                            <magicGradients:GradientStop Color="#a0c1b8" Offset=".6" />
+                                            <magicGradients:GradientStop Color="#f4ebc1" Offset=".8" />
+                                        </magicGradients:RadialGradient>
+                                    </magicGradients:GradientView.GradientSource>
+                                </magicGradients:GradientView>
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+</ContentPage>
